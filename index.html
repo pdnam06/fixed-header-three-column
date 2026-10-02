@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Giản Lược</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-inner">
+            <a class="brand" href="#home">Web<span>Space</span></a>
+            <nav aria-label="Điều hướng chính">
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#services">Dịch vụ</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="home" class="page-container">
+        <aside class="sidebar left-sidebar">
+            <p class="sidebar-label">KHÁM PHÁ</p>
+            <h2>Danh mục</h2>
+            <ul>
+                <li><a href="#design"><span>01</span> Thiết kế Web</a></li>
+                <li><a href="#frontend"><span>02</span> Frontend</a></li>
+                <li><a href="#backend"><span>03</span> Backend</a></li>
+                <li><a href="#tools"><span>04</span> Công cụ</a></li>
+            </ul>
+            <div class="tip">
+                <strong>Mẹo</strong>
+                <p>Cuộn trang để kiểm tra header cố định.</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="about" class="intro">
+                <p class="eyebrow">BỐ CỤC FLEXBOX</p>
+                <h1>Nội dung chính của trang</h1>
+                <p class="lead">
+                    Đây là khu vực chứa nội dung quan trọng nhất. Bố cục ba cột
+                    được xây dựng bằng Flexbox, kết hợp với header cố định ở đầu trang.
+                </p>
+            </section>
+
+            <article id="design" class="article-card">
+                <span class="article-number">01</span>
+                <div>
+                    <h2>Thiết kế giao diện rõ ràng</h2>
+                    <p>
+                        Một bố cục tốt giúp người đọc nhận biết nhanh nội dung chính và
+                        các thông tin bổ trợ. Hai sidebar có chiều rộng cố định, trong khi
+                        vùng nội dung sử dụng <code>flex-grow: 1</code> để chiếm phần còn lại.
+                    </p>
+                </div>
+            </article>
+
+            <article id="frontend" class="article-card">
+                <span class="article-number">02</span>
+                <div>
+                    <h2>Header luôn ở đúng vị trí</h2>
+                    <p>
+                        Header dùng <code>position: fixed</code>, <code>top: 0</code> và
+                        <code>z-index: 1000</code>. Vì header thoát khỏi luồng tài liệu,
+                        phần thân được thêm khoảng trống phía trên để nội dung không bị che.
+                    </p>
+                </div>
+            </article>
+
+            <article id="backend" class="article-card">
+                <span class="article-number">03</span>
+                <div>
+                    <h2>Nội dung có thể mở rộng</h2>
+                    <p>
+                        Khu vực chính phù hợp để trình bày bài viết, sản phẩm hoặc thông tin
+                        chi tiết. Khi nội dung dài hơn màn hình, người dùng vẫn truy cập được
+                        thanh điều hướng mà không cần cuộn trở lại đầu trang.
+                    </p>
+                </div>
+            </article>
+
+            <article id="tools" class="article-card">
+                <span class="article-number">04</span>
+                <div>
+                    <h2>Hiển thị linh hoạt</h2>
+                    <p>
+                        Media Query giúp ba cột chuyển thành một cột trên màn hình nhỏ.
+                        Các thành phần vẫn giữ khoảng cách hợp lý và dễ đọc trên điện thoại.
+                    </p>
+                </div>
+            </article>
+
+            <section id="services" class="service-section">
+                <p class="eyebrow">DỊCH VỤ</p>
+                <h2>Nội dung bổ sung</h2>
+                <p>
+                    Phần này tạo thêm chiều cao cho trang để bạn dễ dàng kiểm tra hiệu ứng
+                    fixed header khi cuộn. Thanh điều hướng sẽ luôn nằm phía trên viewport.
+                </p>
+            </section>
+        </main>
+
+        <aside class="sidebar right-sidebar">
+            <p class="sidebar-label">NỔI BẬT</p>
+            <h2>Bài viết mới</h2>
+            <article class="mini-card">
+                <span>HTML</span>
+                <h3>Thẻ ngữ nghĩa trong HTML5</h3>
+                <a href="#about">Xem bài viết →</a>
+            </article>
+            <article class="mini-card">
+                <span>CSS</span>
+                <h3>Tìm hiểu Flexbox cơ bản</h3>
+                <a href="#frontend">Xem bài viết →</a>
+            </article>
+            <article class="mini-card">
+                <span>LAYOUT</span>
+                <h3>Sử dụng position hiệu quả</h3>
+                <a href="#backend">Xem bài viết →</a>
+            </article>
+        </aside>
+    </div>
+
+    <footer id="contact">
+        <strong>WebSpace</strong>
+        <p>Bài thực hành Fixed Header và bố cục ba cột bằng Flexbox.</p>
+    </footer>
+</body>
+</html>
